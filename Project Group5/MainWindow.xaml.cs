@@ -2,9 +2,6 @@
 
 namespace Project_Group5
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private const string ValidPassword = "1212";

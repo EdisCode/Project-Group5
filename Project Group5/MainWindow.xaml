@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Group5"
+		xmlns:guna1="clr-namespace:Guna.UI2.WinForms;assembly=Guna.UI2"
         mc:Ignorable="d"
         Title="MainWindow" Height="1184" Width="1534" WindowState="Maximized" WindowStartupLocation="CenterScreen" >
     <Window.Background>
