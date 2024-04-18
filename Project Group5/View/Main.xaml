@@ -1,0 +1,27 @@
+﻿<Window x:Class="Project_Group5.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Group5"
+        xmlns:view="clr-namespace:Project_Group5.View"
+        xmlns:viewModel="clr-namespace:Project_Group5.ViewModel"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=viewModel:MainViewModel}"
+        Title="{Binding ActiveTitle}"
+        Width="1440" Height="810" WindowState="Maximized" WindowStartupLocation="CenterScreen" >
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
+                <view:Login/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
+                <view:Dashboard/>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <ContentControl Content="{Binding CurrentViewModel}" />
+    </Grid>
+</Window>

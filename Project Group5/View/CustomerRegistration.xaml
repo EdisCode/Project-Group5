@@ -1,0 +1,229 @@
+﻿<UserControl x:Class="Project_Group5.View.CustomerRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Group5.View"
+        xmlns:viewModel="clr-namespace:Project_Group5.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewModel:CustomerRegistrationViewModel}"
+        mc:Ignorable="d"
+        d:DesignWidth="1440" d:DesignHeight="810">
+
+    <Grid Background="#FFFFFF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    VerticalAlignment="Center"
+                    Margin="16,0,0,0">
+
+            <TextBlock Text="Customer Registration"
+                       Foreground="#000000"
+                       FontSize="24"
+                       FontWeight="Medium"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <Grid HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <StackPanel Margin="16,0,8,16"
+                        HorizontalAlignment="Stretch">
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch">
+                            <Label Content="Name"
+                               Width="Auto"
+                               HorizontalAlignment="Stretch"
+                               Style="{StaticResource TextBoxLabel}"/>
+                            <TextBox Text=""
+                                 x:Name="txtName"
+                                 Width="Auto"
+                                 HorizontalAlignment="Stretch"
+                                 Style="{StaticResource TextBox}"/>
+                        </StackPanel>
+                    
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+                            <Label Content="Mobile No"
+                                   Width="Auto"
+                                   HorizontalAlignment="Stretch"
+                                   Style="{StaticResource TextBoxLabel}"/>
+                            <TextBox Text=""
+                                     x:Name="txtTelephone"
+                                     Width="Auto"
+                                     HorizontalAlignment="Stretch"
+                                     Style="{StaticResource TextBox}"/>
+                        </StackPanel>
+                    
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+                            <Label Content="Nationality"
+                                   Width="Auto"
+                                   HorizontalAlignment="Stretch"
+                                   Style="{StaticResource TextBoxLabel}"/>
+                            <TextBox Text=""
+                                     x:Name="txtNationality"
+                                     Width="Auto"
+                                     HorizontalAlignment="Stretch"
+                                     Style="{StaticResource TextBox}"/>
+                        </StackPanel>
+                    
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+                            <Label Content="Gender"
+                                   Width="Auto"
+                                   HorizontalAlignment="Stretch"
+                                   Style="{StaticResource TextBoxLabel}"/>
+                            <ComboBox x:Name="txtGender"
+                                      Width="Auto"
+                                      HorizontalAlignment="Stretch"
+                                      Background="Transparent"
+                                      Style="{StaticResource ComboBox}"/>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+                            <Label Content="Date of Birth"
+                                   Width="Auto"
+                                   HorizontalAlignment="Stretch"
+                                   Style="{StaticResource TextBoxLabel}"/>
+                            <DatePicker Text=""
+                                        x:Name="txtDob"
+                                        Width="Auto"
+                                        Style="{StaticResource DatePicker}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <StackPanel Margin="8,0,8,16"
+                                HorizontalAlignment="Stretch">
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch">
+                            <Label Content="ID Proof"
+                                   Width="Auto"
+                                   HorizontalAlignment="Stretch"
+                                   Style="{StaticResource TextBoxLabel}"/>
+                            <TextBox Text=""
+                                     x:Name="txtIdProof"
+                                     Width="Auto"
+                                     HorizontalAlignment="Stretch"
+                                     Style="{StaticResource TextBox}"/>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+                            <Label Content="Full Address"
+                                   Width="Auto"
+                                   HorizontalAlignment="Stretch"
+                                   Style="{StaticResource TextBoxLabel}"/>
+                            <TextBox Text=""
+                                    x:Name="txtAddress"
+                                    Width="Auto"
+                                    HorizontalAlignment="Stretch"
+                                    Style="{StaticResource TextBox}"/>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+                            <Label Content="Check In"
+                               Width="Auto"
+                               HorizontalAlignment="Stretch"
+                               Style="{StaticResource TextBoxLabel}"/>
+                            <DatePicker Text=""
+                                    x:Name="txtCheckInDate"
+                                    Width="Auto"
+                                    Style="{StaticResource DatePicker}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <StackPanel Margin="8,0,16,0"
+                                HorizontalAlignment="Stretch">
+                        <Label Content="Bed"
+                               Width="Auto"
+                               HorizontalAlignment="Stretch"
+                               Style="{StaticResource TextBoxLabel}"/>
+                        <ComboBox x:Name="txtBed"
+                                  Width="Auto"
+                                  HorizontalAlignment="Stretch"
+                                  Background="Transparent"
+                                  Style="{StaticResource ComboBox}"/>
+
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+                            <Label Content="Room Type"
+                               Width="Auto"
+                               HorizontalAlignment="Stretch"
+                               Style="{StaticResource TextBoxLabel}"/>
+                            <ComboBox x:Name="txtRoomType"
+                                  Width="Auto"
+                                  HorizontalAlignment="Stretch"
+                                  Background="Transparent"
+                                  Style="{StaticResource ComboBox}"/>
+                        </StackPanel>
+
+
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+                            <Label Content="Room No"
+                               Width="Auto"
+                               HorizontalAlignment="Stretch"
+                               Style="{StaticResource TextBoxLabel}"/>
+                            <ComboBox x:Name="txtRoomNumber"
+                                  Width="Auto"
+                                  HorizontalAlignment="Stretch"
+                                  Background="Transparent"
+                                  Style="{StaticResource ComboBox}"/>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,12,0,0">
+
+                            <Label Content="Price"
+                               Width="Auto"
+                               HorizontalAlignment="Stretch"
+                               Style="{StaticResource TextBoxLabel}"/>
+                            <TextBox Text=""
+                                 x:Name="txtPrice"
+                                 Width="Auto"
+                                 HorizontalAlignment="Stretch"
+                                 Style="{StaticResource TextBox}"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,12,0,0">
+                            <Button Content="Allocate Room"
+                                    Click="OnSubmit"
+                                    Width="Auto"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Center"
+                                    Margin="0,24,0,0"
+                                    Grid.Row="2"
+                                    Style="{StaticResource SecondaryButton}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
