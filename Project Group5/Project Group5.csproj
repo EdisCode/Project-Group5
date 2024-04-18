@@ -22,5 +22,11 @@
   <ItemGroup>
     <Resource Include="temp.jpg" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
   
 </Project>
