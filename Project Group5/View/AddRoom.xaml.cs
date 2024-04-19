@@ -20,7 +20,7 @@ namespace Project_Group5.View
 
         public void OnSubmit(object sender, EventArgs e)
         {
-            MessageBox.Show($"{addRoomViewModel.Room.Number}\n{addRoomViewModel.Room.Type}\n{addRoomViewModel.Room.Bed}\n{addRoomViewModel.Room.Price}");
+            addRoomViewModel.OnSubmit(this, e);
         }
     }
 }

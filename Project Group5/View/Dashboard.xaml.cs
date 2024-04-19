@@ -17,10 +17,5 @@ namespace Project_Group5.View
 
             InitializeComponent();
         }
-
-        private void AddRoom_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

@@ -1,47 +1,48 @@
-﻿using Project_Group5.Models;
+﻿using Project_Group5.Database;
+using Project_Group5.Model;
 using System.Collections.ObjectModel;
 
 namespace Project_Group5.Services
 {
-    public class CustomerService
+    public class CustomerService : DatabaseConnection
     {
-        private ObservableCollection<Customer> customerList;
+        private ObservableCollection<CustomerModel> customerList;
 
         public CustomerService()
         {
-            customerList = new ObservableCollection<Customer>();
+            customerList = new ObservableCollection<CustomerModel>();
         }
 
-        public static Customer? GetByID(string customerID)
+        public static CustomerModel? GetByID(string customerID)
         {
             throw new NotImplementedException();
         }
-        public static ObservableCollection<Customer>? GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static Customer? SearchByID(string customerID)
+        public static ObservableCollection<CustomerModel>? GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public static Customer? SearchByCategory(Customer customer)
+        public static CustomerModel? SearchByID(string customerID)
         {
             throw new NotImplementedException();
         }
 
-        public static Customer? Add(Customer customer)
+        public static CustomerModel? SearchByCategory(CustomerModel customer)
         {
             throw new NotImplementedException();
         }
 
-        public static Customer? Delete(string customerID)
+        public static CustomerModel? Add(CustomerModel customer)
         {
             throw new NotImplementedException();
         }
 
-        public static Customer? Edit(Customer customer)
+        public static CustomerModel? Delete(string customerID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static CustomerModel? Edit(CustomerModel customer)
         {
             throw new NotImplementedException();
         }

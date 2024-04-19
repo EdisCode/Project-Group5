@@ -47,7 +47,7 @@
                               Grid.Row="0">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Room Number"
-                                                Binding="{Binding Number, Mode=OneWay}"
+                                                Binding="{Binding RoomNumber, Mode=OneWay}"
                                                 Width="*"
                                                 FontSize="16"/>
                             <DataGridTextColumn Header="Room Type"
@@ -60,6 +60,10 @@
                                                 FontSize="16"/>
                             <DataGridTextColumn Header="Price"
                                                 Binding="{Binding Price, Mode=OneWay}"
+                                                Width="*"
+                                                FontSize="16"/>
+                            <DataGridTextColumn Header="Booked"
+                                                Binding="{Binding Booked, Mode=OneWay}"
                                                 Width="*"
                                                 FontSize="16"/>
                         </DataGrid.Columns>
@@ -76,7 +80,7 @@
                                    Width="Auto"
                                    HorizontalAlignment="Stretch"
                                    Style="{StaticResource TextBoxLabel}"/>
-                            <TextBox Text="{Binding Room.Number, Mode=TwoWay}"
+                            <TextBox Text="{Binding Room.RoomNumber, Mode=TwoWay}"
                                      x:Name="txtRoomNumber"
                                      Width="Auto"
                                      HorizontalAlignment="Stretch"

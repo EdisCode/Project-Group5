@@ -7,17 +7,6 @@ namespace Project_Group5.ViewModel
 {
     internal class LoginViewModel : AbstractViewModel
     {
-        private const string ValidPassword = "admin";
-        private readonly Dictionary<string, string> ValidUsernames = new()
-        {
-            { "Mahendra", ValidPassword },
-            { "Edikan", ValidPassword },
-            { "Anish", ValidPassword },
-            { "Motunrayo", ValidPassword },
-            { "Mayank", ValidPassword },
-            { "admin", ValidPassword },
-        };
-
         private string username = "";
         public string Username
         {
@@ -40,24 +29,18 @@ namespace Project_Group5.ViewModel
             }
         }
 
-        //public RelayCommand OnSubmitCommand => new RelayCommand( execute => OnSubmitCommand.Execute(execute));
-
         public void OnSubmit(object sender, EventArgs e)
         {
 
             if (EmployeeService.Authenticate(username, password))
             {
-                if (ValidUsernames.TryGetValue(username, out string validPassword) && validPassword == password)
+                if (sender != null)
                 {
                     ((Login)sender).txtPassword.Clear();
                     ((Login)sender).txtUsername.Clear();
 
                     App.NavitageTo(new DashboardViewModel());
                 }
-                else
-                {
-                    MessageBox.Show("Invalid username or password. Please, try again.", "Failed login", MessageBoxButton.OK, MessageBoxImage.Error);
-                };
             }
             else
             {

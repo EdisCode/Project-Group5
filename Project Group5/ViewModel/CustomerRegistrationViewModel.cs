@@ -1,5 +1,4 @@
-﻿using Project_Group5.Model;
-using Project_Group5.MVVM;
+﻿using Project_Group5.MVVM;
 using System.Collections.ObjectModel;
 
 namespace Project_Group5.ViewModel
