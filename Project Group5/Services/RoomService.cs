@@ -68,7 +68,7 @@ namespace Project_Group5.Services
                 command.Parameters.Add("@Bed", SqlDbType.VarChar).Value = room.Bed;
                 command.Parameters.Add("@Price", SqlDbType.Float).Value = room.Price;
 
-                return command.ExecuteNonQuery() > 0;
+                 return command.ExecuteNonQuery() > 0;
             }
         }
     }

@@ -15,6 +15,17 @@ namespace Project_Group5.View
             DataContext = customerDetailsViewModel;
 
             InitializeComponent();
+            dataGrid.ItemsSource = customerDetailsViewModel.CustomerList;
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void DataGrid_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

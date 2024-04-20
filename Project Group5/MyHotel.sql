@@ -23,7 +23,7 @@ CREATE TABLE [Customers]
 (
   [CustomerID]   INT IDENTITY(1,1) PRIMARY KEY,
   [Name]         VARCHAR(255) NOT NULL,
-  [Gender]       VARCHAR(255) CHECK ([Gender] IN('Male', 'Female', 'Other')) NOT NULL,
+  [Gender]       VARCHAR(255) CHECK ([Gender] IN('Male', 'Female', 'Other')) NULL,
   [DateOfBirth]  VARCHAR(255) NOT NULL,
   [Telephone]    VARCHAR(255) NOT NULL,
   [Address]      VARCHAR(255) NOT NULL,
@@ -31,6 +31,9 @@ CREATE TABLE [Customers]
   [IDProof]      VARCHAR(255) NOT NULL,
   [CheckInDate]  DATE NOT NULL,
   [CheckOutDate] DATE NULL,
+  [CheckedOut]   BIT DEFAULT 0 NULL,
+  [RoomID]       UNIQUEIDENTIFIER NOT NULL,
+  FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID)
 );
 
 -- Table: Rooms
@@ -51,8 +54,6 @@ VALUES ('Edikan Ekanem', 'Female', '55223344110', 'eekanem5146@conestogac.on.ca'
 ('Anish Reddi', 'Male', '88523344110', 'areddi@conestogac.on.ca', 'anish', 'admin'),
 ('Mayank Sharma', 'Male', '092723344110', 'msharma@conestogac.on.ca', 'mayank', 'admin');
 
-INSERT INTO [Customers] ([Name], [Gender], [DateOfBirth], [Telephone], [Address], [Nationality], [IDProof], [CheckInDate])
-VALUES ('Edikan Ekanem', 'Female', '1999-12-30', '55223344110', 'Nigeria, Akwaibom State', 'Nigerian', '000-000-000-000', '2024-04-19');
 
 INSERT INTO [Rooms] ([RoomNumber], [Type], [Bed], [Price], [Booked])
 VALUES ('A240', 'AC', 'Double', 150, 1);

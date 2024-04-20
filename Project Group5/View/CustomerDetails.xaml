@@ -47,49 +47,62 @@
 
             <Grid HorizontalAlignment="Stretch"
                   Grid.Row="1">
-                <DataGrid CanUserAddRows="False"
+                <DataGrid ItemsSource="{Binding CustomerList}" 
+                          x:Name="dataGrid"
+                          CanUserAddRows="False"
                             CanUserDeleteRows="False"
                             AutoGenerateColumns="False"
                             Background="#FFFFFF"
                             Height="Auto"
                             BorderThickness="0,0,1,0"
                             BorderBrush="LightGray"
-                            Grid.Row="0">
+                            Grid.Row="0" SelectionChanged="DataGrid_SelectionChanged_1">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name"
+                                            Binding="{Binding Name, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
                         <DataGridTextColumn Header="Phone Number"
+                                            Binding="{Binding Telephone, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
                         <DataGridTextColumn Header="Nationality"
+                                            Binding="{Binding Nationality, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
                         <DataGridTextColumn Header="Gender"
+                                            Binding="{Binding Gender, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
                         <DataGridTextColumn Header="Date of Birth"
+                                            Binding="{Binding DateOfBirth, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
                         <DataGridTextColumn Header="ID Proof"
+                                            Binding="{Binding IDProof, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
                         <DataGridTextColumn Header="Check In"
+                                            Binding="{Binding CheckInDate, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
 
-                        <DataGridTextColumn Header="Room Number"
+                        <!--<DataGridTextColumn Header="Room ID"
+                                            Binding="{Binding RoomID, Mode=OneWay}"
                                             Width="*"
-                                            FontSize="16"/>
-                        <DataGridTextColumn Header="Room Type"
+                                            FontSize="16"/>-->
+                        <!--<DataGridTextColumn Header="Room Type"
+                                            Binding="{Binding Type, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
                         <DataGridTextColumn Header="Bed Type"
+                                            Binding="{Binding Bed, Mode=OneWay}"
                                             Width="*"
                                             FontSize="16"/>
                         <DataGridTextColumn Header="Price"
+                                            Binding="{Binding Price, Mode=OneWay}"
                                             Width="*"
-                                            FontSize="16"/>
+                                            FontSize="16"/>-->
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>

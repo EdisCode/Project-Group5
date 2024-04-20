@@ -91,7 +91,7 @@
                                       Width="Auto"
                                       HorizontalAlignment="Stretch"
                                       Background="Transparent"
-                                      Style="{StaticResource ComboBox}"/>
+                                      Style="{StaticResource ComboBox}" SelectionChanged="txtGender_SelectionChanged" ></ComboBox>
                         </StackPanel>
 
                         <StackPanel VerticalAlignment="Bottom"
@@ -165,7 +165,7 @@
                                   Width="Auto"
                                   HorizontalAlignment="Stretch"
                                   Background="Transparent"
-                                  Style="{StaticResource ComboBox}"/>
+                                  Style="{StaticResource ComboBox}" SelectionChanged="txtBed_SelectionChanged"/>
 
                         <StackPanel VerticalAlignment="Bottom"
                                     HorizontalAlignment="Stretch"
@@ -178,7 +178,7 @@
                                   Width="Auto"
                                   HorizontalAlignment="Stretch"
                                   Background="Transparent"
-                                  Style="{StaticResource ComboBox}"/>
+                                  Style="{StaticResource ComboBox}" SelectionChanged="txtRoomType_SelectionChanged"/>
                         </StackPanel>
 
 
@@ -193,7 +193,7 @@
                                   Width="Auto"
                                   HorizontalAlignment="Stretch"
                                   Background="Transparent"
-                                  Style="{StaticResource ComboBox}"/>
+                                  Style="{StaticResource ComboBox}" SelectionChanged="txtRoomNumber_SelectionChanged"/>
                         </StackPanel>
 
                         <StackPanel VerticalAlignment="Bottom"

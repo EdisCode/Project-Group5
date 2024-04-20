@@ -44,7 +44,8 @@
                               Height="Auto"
                               BorderThickness="0,0,1,0"
                               BorderBrush="LightGray"
-                              Grid.Row="0">
+                              Grid.Row="0"
+                              x:Name="roomTable">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Room Number"
                                                 Binding="{Binding RoomNumber, Mode=OneWay}"

@@ -1,6 +1,7 @@
 ﻿using Project_Group5.Model;
 using Project_Group5.MVVM;
 using Project_Group5.Services;
+using System;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Windows;
@@ -32,41 +33,35 @@ namespace Project_Group5.ViewModel
             RoomBed = new ObservableCollection<string>();
             Room = new RoomModel();
 
+            LoadRoomTypesAndBeds();
 
-            RoomList.Add(new RoomModel()
-            {
-                RoomNumber = "A301",
-                Type = "AC",
-                Bed = "Single",
-                Price = 2500,
-                Booked = true,
-            });
+            LoadRooms(); // Load existing rooms from the database
+        }
 
-            RoomList.Add(new RoomModel()
-            {
-                RoomNumber = "B120",
-                Type = "Non-AC",
-                Bed = "Double",
-                Price = 3000,
-                Booked = false,
-            });
-
-            RoomList.Add(new RoomModel()
-            {
-                RoomNumber = "C200",
-                Type = "Non-AC",
-                Bed = "Triple",
-                Price = 5000,
-                Booked = true,
-            });
-
-
+        private void LoadRoomTypesAndBeds()
+        {
             RoomType.Add("AC");
             RoomType.Add("Non-AC");
 
             RoomBed.Add("Single");
             RoomBed.Add("Double");
             RoomBed.Add("Triple");
+        }
+
+        private void LoadRooms()
+        {
+            DataTable dataTable = RoomService.GetAll();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                RoomList.Add(new RoomModel()
+                {
+                    RoomNumber = row["RoomNumber"].ToString(),
+                    Type = row["Type"].ToString(),
+                    Bed = row["Bed"].ToString(),
+                    Price = Convert.ToSingle(row["Price"]),
+                    Booked = Convert.ToBoolean(row["Booked"])
+                });
+            }
         }
 
         public void OnSubmit(object sender, EventArgs e)
@@ -76,7 +71,9 @@ namespace Project_Group5.ViewModel
                 MessageBox.Show($"{Room.RoomNumber}\n{Room.Type}\n{Room.Bed}\n{Room.Price}");
                 Room = new RoomModel();
 
-                DataTable source = RoomService.GetAll();
+                // Reload rooms from the database after adding a new room
+                RoomList.Clear();
+                LoadRooms();
             }
         }
     }
