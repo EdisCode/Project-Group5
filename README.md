@@ -52,17 +52,39 @@ This Hotel Management System is designed to streamline various aspects of hotel 
 ## Technologies Used
 
 - C# Programming Language
-- .NET Framework (or .NET Core)
-- Entity Framework (for database interaction)
-- SQL Server 
+- .NET Framework
+- Microsoft Data SQLClient (for database interaction)
+- SQL Server
 
 ## Installation and Setup
 
-- Clone the repository to your local machine.
-- Open the project using your preferred IDE.
-- Ensure all dependencies are installed.
-- Configure the database connection string in the application settings.
-- Build and run the application.
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/EdisCode/Project-Group5.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd Project-Group5
+   ```
+
+3. **Run the Application:**
+
+   ```bash
+   dotnet run
+   ```
+
+   - Ensure all dependencies are installed.
+   - Configure the database connection string in `DatabaseConnection.cs`.
+   - Run the SQL queries in your localdb.
+   - Build and run the application.
+   - Signin with `admin` - `admin`.
+
+## Video Link
+
+Follow this [Link](https://www.loom.com/share/5660fb60453b4d2ebd7271ba0799cfb9?sid=2fe827db-8926-4aa9-aa73-adaa93b31599) to watch the implementation video.
 
 ## Contributors
 
